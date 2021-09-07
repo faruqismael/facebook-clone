@@ -2,9 +2,10 @@ import styled from "styled-components";
 import colors from "./colors";
 
 export const SideBarContainer = styled.div`
-  min-width: 30%;
+  min-width: 20%;
   padding: 15px;
 `;
+
 export const SideBarElement = styled.div`
   display: flex;
   align-items: center;
@@ -16,6 +17,7 @@ export const SideBarElement = styled.div`
     background: ${colors.gray};
   }
 `;
+
 export const SideBarElementText = styled.p`
   /* font-weight: 600; */
   font-weight: 500;

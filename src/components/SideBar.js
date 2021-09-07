@@ -1,11 +1,10 @@
 import { Avatar } from "@material-ui/core";
 import React from "react";
-import { Text } from "../styles/Header.style";
 import {
   SideBarContainer,
   SideBarElement,
   SideBarElementText,
-} from "../styles/SideBar.style";
+} from "../assets/styles/SideBar.style";
 import {
   Bookmark,
   ExpandMore,
@@ -17,7 +16,8 @@ import {
   Restore,
   StoreRounded,
 } from "@material-ui/icons";
-import colors from "../styles/colors";
+import colors from "../assets/styles/colors";
+
 function SideBar() {
   return (
     <SideBarContainer>
@@ -35,7 +35,7 @@ function SideBar() {
             color: "white",
             backgroundColor: colors.blue,
             borderRadius: "50%",
-            padding: "10px",
+            padding: "2px",
           }}
           fontSize="large"
         />
@@ -64,10 +64,6 @@ function SideBar() {
       <SideBarElement>
         <ExpandMore fontSize="large" />
         <SideBarElementText>See More</SideBarElementText>
-      </SideBarElement>
-      <SideBarElement>
-        <Bookmark style={{ color: "#9a38cc" }} fontSize="large" />
-        <SideBarElementText>Saved</SideBarElementText>
       </SideBarElement>
     </SideBarContainer>
   );

@@ -1,8 +1,12 @@
 import React from "react";
-import "./styles/tailwind.min.css";
+// import "./styles/tailwind.min.css";
 import Header from "./components/Header.js";
 import styled from "styled-components";
 import SideBar from "./components/SideBar";
+import Story from "./components/Story.js";
+import { Card } from "@material-ui/core";
+import RememberPassword from "./components/RememberPassword.js";
+import PostForm from "./components/PostForm.js";
 
 function App() {
   return (
@@ -10,7 +14,10 @@ function App() {
       <Header />
       <BodyContainer>
         <SideBar />
-        <div>
+        <div style={{ maxWidth: "40%" }}>
+          <Story />
+          <RememberPassword />
+          <PostForm />
           lfghjjdtfghjhv bhjdsf hduibdfjk lfghjjdtfghjhv bhjdsf hduibdfjk
           lfghjjdtfghjhv bhjdsf hduibdfjk lfghjjdtfghjhv bhjdsf hduibdfjk
           lfghjjdtfghjhv bhjdsf hduibdfjk lfghjjdtfghjhv bhjdsf hduibdfjk

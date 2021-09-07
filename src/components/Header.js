@@ -25,7 +25,8 @@ import {
   HeaderInput,
   Text,
   CircleButton,
-} from "../styles/Header.style";
+  HeaderRightOption,
+} from "../assets/styles/Header.style";
 
 function Header() {
   return (
@@ -34,11 +35,7 @@ function Header() {
         <FaceBookLogo src={logo} alt="logo" />
         <HeaderInput>
           <Search />
-          <SearchInput
-            type="text"
-            className=" focus:outline-none"
-            placeholder="Search Facebook"
-          />
+          <SearchInput type="text" placeholder="Search Facebook" />
         </HeaderInput>
       </HeaderLeft>
 
@@ -64,7 +61,7 @@ function Header() {
           <Avatar />
           <Text>Faruq</Text>
         </HeaderInfo>
-        <HeaderOption>
+        <HeaderRightOption>
           <CircleButton className="focus:outline-none">
             <Add />
           </CircleButton>
@@ -77,7 +74,7 @@ function Header() {
           <CircleButton className="focus:outline-none">
             <ExpandMore />
           </CircleButton>
-        </HeaderOption>
+        </HeaderRightOption>
       </HeaderRight>
     </HeaderContainer>
   );
