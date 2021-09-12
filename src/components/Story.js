@@ -13,27 +13,81 @@ function Story() {
   return (
     <div>
       <StoryContainer>
-        <StoryCard />
-        <StoryCard />
-        <StoryCard />
-        <StoryCard />
-        <StoryCard />
-        <StoryCard />
-        <StoryCard />
-        <StoryCard />
-        <StoryCard />
-        <StoryCard />
-        <StoryCard />
-        <StoryCard />
-        <StoryCard />
-        <StoryCard />
-        <StoryCard />
-        <StoryCard />
-        <StoryCard />
-        <StoryCard />
-        <StoryCard />
-        <StoryCard />
-        <StoryCard />
+        <StoryCard
+          image="fbstory.jpg"
+          profile="https://randomuser.me/api/portraits/men/32.jpg"
+          username=" Carpenter"
+        />
+        <StoryCard
+          image="fbstory.jpg"
+          profile="https://randomuser.me/api/portraits/men/38.jpg"
+          username="John Carpenter"
+        />
+        <StoryCard
+          image="fbstory.jpg"
+          profile="https://randomuser.me/api/portraits/men/28.jpg"
+          username="John Carpenter"
+        />
+        <StoryCard
+          image="fbstory.jpg"
+          profile="https://randomuser.me/api/portraits/women/38.jpg"
+          username="John Carpenter"
+        />
+        <StoryCard
+          image="fbstory.jpg"
+          profile="https://randomuser.me/api/portraits/men/30.jpg"
+          username="John Carpenter"
+        />
+        <StoryCard
+          image="fbstory.jpg"
+          profile="https://randomuser.me/api/portraits/women/23.jpg"
+          username="John Carpenter"
+        />
+        <StoryCard
+          image="fbstory.jpg"
+          profile="https://randomuser.me/api/portraits/men/18.jpg"
+          username="John Carpenter"
+        />
+        <StoryCard
+          image="fbstory.jpg"
+          profile="https://randomuser.me/api/portraits/women/88.jpg"
+          username="John Carpenter"
+        />
+        <StoryCard
+          image="fbstory.jpg"
+          profile="https://randomuser.me/api/portraits/men/11.jpg"
+          username="John Carpenter"
+        />
+        <StoryCard
+          image="fbstory.jpg"
+          profile="https://randomuser.me/api/portraits/men/67.jpg"
+          username="John Carpenter"
+        />
+        <StoryCard
+          image="fbstory.jpg"
+          profile="https://randomuser.me/api/portraits/women/23.jpg"
+          username="John Carpenter"
+        />
+        <StoryCard
+          image="fbstory.jpg"
+          profile="https://randomuser.me/api/portraits/men/34.jpg"
+          username="John Carpenter"
+        />
+        <StoryCard
+          image="fbstory.jpg"
+          profile="https://randomuser.me/api/portraits/women/11.jpg"
+          username="John Carpenter"
+        />
+        <StoryCard
+          image="fbstory.jpg"
+          profile="https://randomuser.me/api/portraits/men/48.jpg"
+          username="John Carpenter"
+        />
+        <StoryCard
+          image="fbstory.jpg"
+          profile="https://randomuser.me/api/portraits/men/38.jpg"
+          username="John Carpenter"
+        />
       </StoryContainer>
       <ArrowForward
         style={{

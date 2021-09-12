@@ -34,7 +34,7 @@ function Header() {
       <HeaderLeft>
         <FaceBookLogo src={logo} alt="logo" />
         <HeaderInput>
-          <Search />
+          <Search style={{ fontSize: "17px" }} />
           <SearchInput type="text" placeholder="Search Facebook" />
         </HeaderInput>
       </HeaderLeft>
@@ -63,16 +63,16 @@ function Header() {
         </HeaderInfo>
         <HeaderRightOption>
           <CircleButton className="focus:outline-none">
-            <Add />
+            <Add style={{ fontSize: "17px" }} />
           </CircleButton>
           <CircleButton className="focus:outline-none">
-            <Forum />
+            <Forum style={{ fontSize: "17px" }} />
           </CircleButton>
           <CircleButton className="focus:outline-none">
-            <NotificationsActive />
+            <NotificationsActive style={{ fontSize: "17px" }} />
           </CircleButton>
           <CircleButton className="focus:outline-none">
-            <ExpandMore />
+            <ExpandMore style={{ fontSize: "17px" }} />
           </CircleButton>
         </HeaderRightOption>
       </HeaderRight>

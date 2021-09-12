@@ -17,10 +17,12 @@ import {
   StoreRounded,
 } from "@material-ui/icons";
 import colors from "../assets/styles/colors";
+import styled from "styled-components";
+import responsive, { breakPoint } from "../assets/styles/utils";
 
-function SideBar() {
+function RightSideBar() {
   return (
-    <SideBarContainer>
+    <RightSide>
       <SideBarElement>
         <Avatar />
         <SideBarElementText>Faruq Ismael</SideBarElementText>
@@ -64,8 +66,19 @@ function SideBar() {
         <ExpandMore />
         <SideBarElementText>See More</SideBarElementText>
       </SideBarElement>
-    </SideBarContainer>
+    </RightSide>
   );
 }
 
-export default SideBar;
+const RightSide = styled.div`
+  min-width: 20%;
+  padding: 15px;
+
+  @media only screen and (${breakPoint.device.sm}) {
+    display: none;
+  }
+`;
+
+// @media (${responsive.device.xs}) {
+//   display: none;
+export default RightSideBar;

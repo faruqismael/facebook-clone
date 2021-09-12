@@ -1,12 +1,12 @@
 import React from "react";
 import { Card, Photo, Profile, Username } from "../assets/styles/Story.style";
 
-function StoryCard() {
+function StoryCard({ profile, image, username }) {
   return (
-    <Card>
-      <Profile />
-      <Photo />
-      <Username>Mzee D James</Username>
+    <Card image={image}>
+      <Profile src={profile} />
+      {/* <Photo /> */}
+      <Username>{username}</Username>
     </Card>
   );
 }
