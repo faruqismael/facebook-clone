@@ -1,6 +1,6 @@
 import { Avatar } from "@material-ui/core";
 import { Map, ThumbUp, ChatBubbleOutline, NearMe } from "@material-ui/icons";
-import React from "react";
+import React, { useContext } from "react";
 import {
   PostContainer,
   PostImage,

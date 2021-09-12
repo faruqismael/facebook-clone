@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import logo from "../assets/image/logo.png";
 import {
   Search,
@@ -27,11 +27,13 @@ import {
   CircleButton,
   HeaderRightOption,
 } from "../assets/styles/Header.style";
+import UserContext from "../context/UserContext";
 
 function Header() {
+  const value = useContext(UserContext);
   return (
     <HeaderContainer>
-      <HeaderLeft>
+      <HeaderLeft onClick={value.changeName}>
         <FaceBookLogo src={logo} alt="logo" />
         <HeaderInput>
           <Search style={{ fontSize: "17px" }} />
@@ -59,7 +61,7 @@ function Header() {
       <HeaderRight>
         <HeaderInfo>
           <Avatar />
-          <Text>Faruq</Text>
+          <Text>{value.user}</Text>
         </HeaderInfo>
         <HeaderRightOption>
           <CircleButton className="focus:outline-none">

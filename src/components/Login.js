@@ -3,13 +3,18 @@ import { LoginContainer } from "../assets/styles/Login.style";
 import logo from "../assets/image/logo.png";
 import googlelogo from "../assets/image/google.svg";
 import { Button, IconButton } from "@material-ui/core";
+import UserContext from "../context/UserContext";
 
 function Login() {
+  const context = React.useContext(UserContext);
+
   return (
     <LoginContainer>
+      {console.log(context)}
       <img width="80" src={logo} />
       <IconButton
         style={{ borderRadius: 0, background: "gray", color: "white" }}
+        onClick={context.changeName}
       >
         <img
           style={{

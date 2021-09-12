@@ -11,9 +11,38 @@ import Body from "./components/Body.js";
 import RightSideBar from "./components/RightSideBar.js";
 import Login from "./components/Login.js";
 
+import UserContext from "./context/UserContext.js";
+import PostContext from "./context/PostContext.js";
+
 function App() {
   const [loading, setLoading] = useState(true);
-  let user = null;
+  const [user, setUser] = useState(localStorage.getItem("user"));
+  const [posts, setPosts] = useState([
+    {
+      username: "Faruq Ismael",
+      timestamp: "32min",
+      msg: "Next time you log in on this browser, just click your profile picture instead of typing a password.",
+    },
+    {
+      username: "Seid Ismael",
+      timestamp: "2min",
+      msg: "relevant Linkedin posts in your existing feed below. You can react, commejust click your profile picture instead of typing a password.",
+    },
+    {
+      username: "Ismael Abdela",
+      timestamp: "12hr",
+      msg: "We’ve added relevant Linkedin posts in your existing feed below. You can react, comme",
+    },
+  ]);
+
+  const changeName = () => {
+    setUser("Ismael");
+    localStorage.setItem("user", "Ismael");
+  };
+
+  const logout = () => {
+    setUser(localStorage.removeItem("user"));
+  };
 
   useEffect(() => {
     setTimeout(() => {
@@ -22,7 +51,7 @@ function App() {
   }, []);
 
   return (
-    <>
+    <UserContext.Provider value={{ user, changeName, logout }}>
       {!user ? (
         <Login />
       ) : (
@@ -36,13 +65,15 @@ function App() {
                 style={{ margin: "10%", width: "100%", height: "10px" }}
               />
             ) : (
-              <Body />
+              <PostContext.Provider value={{ posts }}>
+                <Body />
+              </PostContext.Provider>
             )}
             <RightSideBar />
           </BodyContainer>
         </AppContainer>
       )}
-    </>
+    </UserContext.Provider>
   );
 }
 
