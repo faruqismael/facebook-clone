@@ -17,9 +17,9 @@ function Body() {
       {postContext.posts.map((post) => (
         <Post
           image="bg-tests.jpg"
-          username={post.username}
+          username={post.name}
           timestamp={post.timestamp}
-          msg={post.msg}
+          msg={post.content}
         />
       ))}
       <Post

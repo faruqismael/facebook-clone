@@ -1,5 +1,11 @@
 import { Avatar } from "@material-ui/core";
-import { Map, ThumbUp, ChatBubbleOutline, NearMe } from "@material-ui/icons";
+import {
+  Map,
+  ThumbUp,
+  ChatBubbleOutline,
+  NearMe,
+  Public,
+} from "@material-ui/icons";
 import React, { useContext } from "react";
 import {
   PostContainer,
@@ -27,7 +33,7 @@ function Post({ profilePicture, username, image, timestamp, msg }) {
           <h4>{username}</h4>
           <TimeStamp>
             <small>{timestamp}</small>
-            <Map fontSize="small" />
+            <Public fontSize="small" />
           </TimeStamp>
         </Profile>
       </Section>

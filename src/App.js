@@ -13,31 +13,18 @@ import Login from "./components/Login.js";
 
 import UserContext from "./context/UserContext.js";
 import PostContext from "./context/PostContext.js";
+import postsList from "./context/posts.json";
 
 function App() {
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState(localStorage.getItem("user"));
-  const [posts, setPosts] = useState([
-    {
-      username: "Faruq Ismael",
-      timestamp: "32min",
-      msg: "Next time you log in on this browser, just click your profile picture instead of typing a password.",
-    },
-    {
-      username: "Seid Ismael",
-      timestamp: "2min",
-      msg: "relevant Linkedin posts in your existing feed below. You can react, commejust click your profile picture instead of typing a password.",
-    },
-    {
-      username: "Ismael Abdela",
-      timestamp: "12hr",
-      msg: "We’ve added relevant Linkedin posts in your existing feed below. You can react, comme",
-    },
-  ]);
+  const [posts, setPosts] = useState(postsList);
 
-  const changeName = () => {
-    setUser("Ismael");
-    localStorage.setItem("user", "Ismael");
+  const changeName = (username = "Faruq Ismael") => {
+    console.log(username);
+    if (typeof username == "undefined") return;
+    setUser(username);
+    localStorage.setItem("user", username);
   };
 
   const logout = () => {
@@ -52,7 +39,7 @@ function App() {
 
   return (
     <UserContext.Provider value={{ user, changeName, logout }}>
-      {!user ? (
+      {!user || user == undefined ? (
         <Login />
       ) : (
         <AppContainer>
@@ -79,6 +66,7 @@ function App() {
 
 const AppContainer = styled.div`
   overflow-x: hidden;
+  scroll-behavior: smooth;
 `;
 
 const BodyContainer = styled.div`

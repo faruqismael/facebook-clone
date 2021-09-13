@@ -1,3 +1,4 @@
+import { Input } from "@material-ui/core";
 import styled from "styled-components";
 
 export const LoginContainer = styled.div`
@@ -9,3 +10,10 @@ export const LoginContainer = styled.div`
   justify-content: space-evenly;
   align-items: center;
 `;
+
+export const InputGroup = styled.form`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const InputForm = styled(Input)``;
