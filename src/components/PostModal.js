@@ -1,20 +1,7 @@
 import React, { useState } from "react";
-import {
-  Avatar,
-  Button,
-  Card,
-  CardActions,
-  CardContent,
-  CardHeader,
-  IconButton,
-  Input,
-  MenuList,
-} from "@material-ui/core";
+import { Avatar, Card, CardActions, IconButton } from "@material-ui/core";
 import {
   Close,
-  LinearScaleOutlined,
-  LocalActivity,
-  LocationCityRounded,
   LocationOn,
   Menu,
   People,
@@ -28,7 +15,7 @@ function PostModal({ showPostModal, text, setText, image, setImage }) {
   const [showImageInput, setShowImageInput] = useState(false);
 
   function canPost() {
-    if (text != "" || image != "") return true;
+    if (text !== "" || image !== "") return true;
     return false;
   }
   return (

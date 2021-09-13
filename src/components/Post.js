@@ -1,12 +1,6 @@
 import { Avatar } from "@material-ui/core";
-import {
-  Map,
-  ThumbUp,
-  ChatBubbleOutline,
-  NearMe,
-  Public,
-} from "@material-ui/icons";
-import React, { useContext } from "react";
+import { ThumbUp, ChatBubbleOutline, NearMe, Public } from "@material-ui/icons";
+import React from "react";
 import {
   PostContainer,
   PostImage,
@@ -17,9 +11,9 @@ import {
 } from "../assets/styles/post.style";
 import postimg from "../assets/image/bg-tests.jpg";
 
-function Post({ profilePicture, username, image, timestamp, msg }) {
+function Post({ username, timestamp, msg }) {
   function handleLikeClick(e) {
-    if (e.target.style.color == "rgba(26, 120, 244, 0.82)") {
+    if (e.target.style.color === "rgba(26, 120, 244, 0.82)") {
       e.target.style.color = "gray";
     } else {
       e.target.style.color = "rgba(26, 120, 244, 0.82)";

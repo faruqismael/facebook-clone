@@ -1,12 +1,6 @@
-import { ArrowForward, ArrowRight } from "@material-ui/icons";
+import { ArrowForward } from "@material-ui/icons";
 import React from "react";
-import {
-  StoryContainer,
-  Card,
-  Profile,
-  Photo,
-  Username,
-} from "../assets/styles/Story.style";
+import { StoryContainer } from "../assets/styles/Story.style";
 import StoryCard from "./StoryCard";
 
 function Story() {

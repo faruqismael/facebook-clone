@@ -1,7 +1,6 @@
 import { Avatar } from "@material-ui/core";
 import React from "react";
 import {
-  SideBarContainer,
   SideBarElement,
   SideBarElementText,
 } from "../assets/styles/SideBar.style";
@@ -11,14 +10,13 @@ import {
   Flag,
   Group,
   OndemandVideo,
-  OndemandVideoRounded,
   PeopleAltRounded,
   Restore,
   StoreRounded,
 } from "@material-ui/icons";
 import colors from "../assets/styles/colors";
 import styled from "styled-components";
-import responsive, { breakPoint } from "../assets/styles/utils";
+import { breakPoint } from "../assets/styles/utils";
 
 function RightSideBar() {
   return (

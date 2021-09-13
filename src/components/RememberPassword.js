@@ -1,10 +1,9 @@
-import { Button, Card } from "@material-ui/core";
+import { Button } from "@material-ui/core";
 import React, { useState } from "react";
 import { FaceBookLogo } from "../assets/styles/Header.style";
 import logo from "../assets/image/logo.png";
 import password from "../assets/image/password.png";
 import { Close } from "@material-ui/icons";
-import styled from "styled-components";
 import {
   CardButton,
   CardButtons,
@@ -21,7 +20,7 @@ function RememberPassword() {
       <RememberPasswordCard>
         <TopCard>
           <FaceBookLogo src={logo} />
-          <img src={password} width={100} />
+          <img src={password} width={100} alt="facebook logo" />
           <Button>
             <Close onClick={() => setOpen(false)} />
           </Button>

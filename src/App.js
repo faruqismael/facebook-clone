@@ -3,10 +3,7 @@ import React, { useEffect, useState } from "react";
 import Header from "./components/Header.js";
 import styled from "styled-components";
 import SideBar from "./components/SideBar";
-import Story from "./components/Story.js";
-import { Card, CircularProgress, LinearProgress } from "@material-ui/core";
-import RememberPassword from "./components/RememberPassword.js";
-import PostForm from "./components/PostForm.js";
+import { LinearProgress } from "@material-ui/core";
 import Body from "./components/Body.js";
 import RightSideBar from "./components/RightSideBar.js";
 import Login from "./components/Login.js";
@@ -14,21 +11,40 @@ import Login from "./components/Login.js";
 import UserContext from "./context/UserContext.js";
 import PostContext from "./context/PostContext.js";
 import postsList from "./context/posts.json";
+import { auth } from "./firebase.config.js";
 
 function App() {
   const [loading, setLoading] = useState(true);
-  const [user, setUser] = useState(localStorage.getItem("user"));
+  const [userData, setUserData] = useState({
+    displayName: sessionStorage.getItem("displayName"),
+    photoURL: sessionStorage.getItem("photoURL"),
+    email: sessionStorage.getItem("email"),
+  });
+
+  const [loggedIn, setLoggedIn] = useState(sessionStorage.getItem("isLogged"));
   const [posts, setPosts] = useState(postsList);
 
-  const changeName = (username = "Faruq Ismael") => {
-    console.log(username);
-    if (typeof username == "undefined") return;
-    setUser(username);
-    localStorage.setItem("user", username);
+  const setUser = (user) => {
+    setUserData(user);
+
+    setLoggedIn(true);
+
+    sessionStorage.setItem("isLogged", true);
+    sessionStorage.setItem("displayName", user.displayName);
+    sessionStorage.setItem("photoURL", user.photoURL);
+    sessionStorage.setItem("email", user.email);
   };
 
-  const logout = () => {
-    setUser(localStorage.removeItem("user"));
+  const logout = async () => {
+    setLoggedIn(false);
+    setUserData(null);
+
+    sessionStorage.removeItem("isLogged");
+    sessionStorage.removeItem("displayName");
+    sessionStorage.removeItem("photoURL");
+    sessionStorage.removeItem("email");
+
+    await auth.signOut();
   };
 
   useEffect(() => {
@@ -38,8 +54,8 @@ function App() {
   }, []);
 
   return (
-    <UserContext.Provider value={{ user, changeName, logout }}>
-      {!user || user == undefined ? (
+    <UserContext.Provider value={{ userData, setUser, logout }}>
+      {!sessionStorage.getItem("isLogged") ? (
         <Login />
       ) : (
         <AppContainer>

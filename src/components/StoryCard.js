@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Photo, Profile, Username } from "../assets/styles/Story.style";
+import { Card, Profile, Username } from "../assets/styles/Story.style";
 
 function StoryCard({ profile, image, username }) {
   return (

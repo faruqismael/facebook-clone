@@ -30,10 +30,10 @@ import {
 import UserContext from "../context/UserContext";
 
 function Header() {
-  const value = useContext(UserContext);
+  const context = useContext(UserContext);
   return (
     <HeaderContainer>
-      <HeaderLeft onClick={value.changeName}>
+      <HeaderLeft onClick>
         <FaceBookLogo src={logo} alt="logo" />
         <HeaderInput>
           <Search style={{ fontSize: "17px" }} />
@@ -60,8 +60,9 @@ function Header() {
       </HeaderCenter>
       <HeaderRight>
         <HeaderInfo>
-          <Avatar />
-          <Text>{value.user}</Text>
+          {/* <Avatar src={context.userData.photoURL} /> */}
+          <Avatar src="https://lh3.googleusercontent.com/a-/AOh14GhhlVmg44a4ovjsJIHteEJ1akulfQ2STnovHrR7=s96-c" />
+          <Text>{context.userData.displayName}</Text>
         </HeaderInfo>
         <HeaderRightOption>
           <CircleButton className="focus:outline-none">

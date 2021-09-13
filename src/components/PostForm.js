@@ -4,12 +4,15 @@ import {
   PhotoLibrary,
   VideoCall,
 } from "@material-ui/icons";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import styled from "styled-components";
+import UserContext from "../context/UserContext";
 import PostModal from "./PostModal";
 
 function PostForm() {
   const [showPostModal, setShowPostModal] = useState(false);
+
+  const userContext = useContext(UserContext);
 
   const [postText, setPostText] = useState("");
   const [postImage, setPostImage] = useState("");
@@ -26,7 +29,7 @@ function PostForm() {
         />
       )}
       <TopPostCard style={{ padding: "10px", margin: "10px 0" }}>
-        <Avatar />
+        <Avatar src={userContext.userData.photoURL} />
         <div style={{ width: "100%" }} onClick={() => setShowPostModal(true)}>
           <PostInput
             disabled

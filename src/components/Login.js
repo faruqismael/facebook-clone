@@ -1,28 +1,34 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { LoginContainer, InputGroup } from "../assets/styles/Login.style";
 import logo from "../assets/image/logo.png";
 import googlelogo from "../assets/image/google.svg";
 import { Button, IconButton, Input } from "@material-ui/core";
 import UserContext from "../context/UserContext";
 import { InputRounded } from "@material-ui/icons";
+
 import { auth, provider } from "../firebase.config";
+import { signInWithPopup } from "firebase/auth";
 
 function Login() {
   const context = React.useContext(UserContext);
-  const [username, setUsername] = useState("hughu");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
   function signIn() {
-    auth
-      .signInWithPopup(provider)
-      .then((result) => console.log(result))
-      .catch((err) => console.log(err.message));
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        context.setUser(user);
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
   }
 
   return (
     <LoginContainer>
-      {console.log(context)}
-      <img width="80" src={logo} />
+      <img width="80" src={logo} alt="facebook logo" />
 
       <InputGroup>
         <Input
@@ -40,14 +46,20 @@ function Login() {
         />
         <Button
           onClick={() =>
-            password != "" && username != "" && context.changeName(username)
+            password !== "" &&
+            username !== "" &&
+            context.setUser({
+              displayName: username,
+              email: "default@mail.me",
+              photoURL:
+                "https://lh3.googleusercontent.com/a-/AOh14GhhlVmg44a4ovjsJIHteEJ1akulfQ2STnovHrR7=s96-c",
+            })
           }
           style={{ margin: "10px", background: "#1a78f4", color: "white" }}
         >
           <InputRounded /> Login
         </Button>
       </InputGroup>
-      {/* // onClick={() => context.changeName("Faruq Ismael")} */}
 
       <IconButton
         style={{ borderRadius: 0, background: "gray", color: "white" }}
@@ -62,6 +74,7 @@ function Login() {
           }}
           width="20"
           src={googlelogo}
+          alt="google logo"
         />
         Login With Google
       </IconButton>
