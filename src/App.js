@@ -21,13 +21,10 @@ function App() {
     email: sessionStorage.getItem("email"),
   });
 
-  const [loggedIn, setLoggedIn] = useState(sessionStorage.getItem("isLogged"));
   const [posts, setPosts] = useState(postsList);
 
   const setUser = (user) => {
     setUserData(user);
-
-    setLoggedIn(true);
 
     sessionStorage.setItem("isLogged", true);
     sessionStorage.setItem("displayName", user.displayName);
@@ -36,7 +33,6 @@ function App() {
   };
 
   const logout = async () => {
-    setLoggedIn(false);
     setUserData(null);
 
     sessionStorage.removeItem("isLogged");

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { LoginContainer, InputGroup } from "../assets/styles/Login.style";
 import logo from "../assets/image/logo.png";
 import googlelogo from "../assets/image/google.svg";
