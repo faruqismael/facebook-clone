@@ -1,0 +1,215 @@
+[debug] [2021-09-14T06:34:28.564Z] ----------------------------------------------------------------------
+[debug] [2021-09-14T06:34:28.567Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\faruqismael\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-09-14T06:34:28.567Z] CLI Version:   9.18.0
+[debug] [2021-09-14T06:34:28.567Z] Platform:      win32
+[debug] [2021-09-14T06:34:28.568Z] Node Version:  v14.17.4
+[debug] [2021-09-14T06:34:29.140Z] Time:          Mon Sep 13 2021 23:34:28 GMT-0700 (Pacific Daylight Time)
+[debug] [2021-09-14T06:34:29.141Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-09-14T06:34:29.838Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-09-14T06:34:29.838Z] > authorizing via signed-in user (farusmith5@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  Z:\Portfolio\React\facebook-clone
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2021-09-14T06:39:33.713Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-09-14T06:39:33.714Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-09-14T06:39:38.698Z] <<< HTTP RESPONSE 200 {"date":"Tue, 14 Sep 2021 06:39:38 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-14T06:39:38.788Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects  
+ {"projectId":"facebook","name":"facebook"}
+[debug] [2021-09-14T06:39:40.743Z] <<< HTTP RESPONSE 409 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Tue, 14 Sep 2021 06:39:40 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1339","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-14T06:39:40.743Z] <<< HTTP RESPONSE BODY {"error":{"code":409,"message":"Requested entity already exists","status":"ALREADY_EXISTS"}}
+[debug] [2021-09-14T06:39:41.395Z] FirebaseError: HTTP Error: 409, Requested entity already exists
+    at module.exports (C:\Users\faruqismael\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:38:12)
+    at Request._callback (C:\Users\faruqismael\AppData\Roaming\npm\node_modules\firebase-tools\lib\api.js:41:35)
+    at Request.self.callback (C:\Users\faruqismael\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:185:22)
+    at Request.emit (events.js:400:28)
+    at Request.emit (domain.js:470:12)
+    at Request.<anonymous> (C:\Users\faruqismael\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1154:10)
+    at Request.emit (events.js:400:28)
+    at Request.emit (domain.js:470:12)
+    at IncomingMessage.<anonymous> (C:\Users\faruqismael\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (events.js:519:28)
+    at IncomingMessage.emit (events.js:412:35)
+    at IncomingMessage.emit (domain.js:470:12)
+    at endReadableNT (internal/streams/readable.js:1317:12)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21)
+[error] 
+[error] Error: Failed to create project because there is already a project with ID facebook. Please try again with a unique project ID.
+[debug] [2021-09-14T06:40:04.287Z] ----------------------------------------------------------------------
+[debug] [2021-09-14T06:40:04.289Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\faruqismael\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-09-14T06:40:04.289Z] CLI Version:   9.18.0
+[debug] [2021-09-14T06:40:04.289Z] Platform:      win32
+[debug] [2021-09-14T06:40:04.289Z] Node Version:  v14.17.4
+[debug] [2021-09-14T06:40:04.290Z] Time:          Mon Sep 13 2021 23:40:04 GMT-0700 (Pacific Daylight Time)
+[debug] [2021-09-14T06:40:04.290Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-09-14T06:40:04.301Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-09-14T06:40:04.302Z] > authorizing via signed-in user (farusmith5@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  Z:\Portfolio\React\facebook-clone
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2021-09-14T06:43:16.276Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects  
+ {"projectId":"fb-clone","name":"fbclone"}
+[debug] [2021-09-14T06:43:18.053Z] <<< HTTP RESPONSE 409 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Tue, 14 Sep 2021 06:43:17 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1270","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-14T06:43:18.054Z] <<< HTTP RESPONSE BODY {"error":{"code":409,"message":"Requested entity already exists","status":"ALREADY_EXISTS"}}
+[debug] [2021-09-14T06:43:19.549Z] FirebaseError: HTTP Error: 409, Requested entity already exists
+    at module.exports (C:\Users\faruqismael\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:38:12)
+    at Request._callback (C:\Users\faruqismael\AppData\Roaming\npm\node_modules\firebase-tools\lib\api.js:41:35)
+    at Request.self.callback (C:\Users\faruqismael\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:185:22)
+    at Request.emit (events.js:400:28)
+    at Request.emit (domain.js:470:12)
+    at Request.<anonymous> (C:\Users\faruqismael\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1154:10)
+    at Request.emit (events.js:400:28)
+    at Request.emit (domain.js:470:12)
+    at IncomingMessage.<anonymous> (C:\Users\faruqismael\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (events.js:519:28)
+    at IncomingMessage.emit (events.js:412:35)
+    at IncomingMessage.emit (domain.js:470:12)
+    at endReadableNT (internal/streams/readable.js:1317:12)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21)
+[error] 
+[error] Error: Failed to create project because there is already a project with ID fb-clone. Please try again with a unique project ID.
+[debug] [2021-09-14T06:43:30.081Z] ----------------------------------------------------------------------
+[debug] [2021-09-14T06:43:30.083Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\faruqismael\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-09-14T06:43:30.083Z] CLI Version:   9.18.0
+[debug] [2021-09-14T06:43:30.084Z] Platform:      win32
+[debug] [2021-09-14T06:43:30.084Z] Node Version:  v14.17.4
+[debug] [2021-09-14T06:43:30.084Z] Time:          Mon Sep 13 2021 23:43:30 GMT-0700 (Pacific Daylight Time)
+[debug] [2021-09-14T06:43:30.085Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-09-14T06:43:30.096Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-09-14T06:43:30.097Z] > authorizing via signed-in user (farusmith5@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  Z:\Portfolio\React\facebook-clone
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2021-09-14T06:44:02.433Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects  
+ {"projectId":"fbclone","name":"farufbclone"}
+[debug] [2021-09-14T06:44:04.275Z] <<< HTTP RESPONSE 409 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Tue, 14 Sep 2021 06:44:04 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1282","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-14T06:44:04.276Z] <<< HTTP RESPONSE BODY {"error":{"code":409,"message":"Requested entity already exists","status":"ALREADY_EXISTS"}}
+[debug] [2021-09-14T06:44:05.350Z] FirebaseError: HTTP Error: 409, Requested entity already exists
+    at module.exports (C:\Users\faruqismael\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:38:12)
+    at Request._callback (C:\Users\faruqismael\AppData\Roaming\npm\node_modules\firebase-tools\lib\api.js:41:35)
+    at Request.self.callback (C:\Users\faruqismael\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:185:22)
+    at Request.emit (events.js:400:28)
+    at Request.emit (domain.js:470:12)
+    at Request.<anonymous> (C:\Users\faruqismael\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1154:10)
+    at Request.emit (events.js:400:28)
+    at Request.emit (domain.js:470:12)
+    at IncomingMessage.<anonymous> (C:\Users\faruqismael\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (events.js:519:28)
+    at IncomingMessage.emit (events.js:412:35)
+    at IncomingMessage.emit (domain.js:470:12)
+    at endReadableNT (internal/streams/readable.js:1317:12)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21)
+[error] 
+[error] Error: Failed to create project because there is already a project with ID fbclone. Please try again with a unique project ID.
+[debug] [2021-09-14T06:44:19.919Z] ----------------------------------------------------------------------
+[debug] [2021-09-14T06:44:19.923Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\faruqismael\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-09-14T06:44:19.923Z] CLI Version:   9.18.0
+[debug] [2021-09-14T06:44:19.923Z] Platform:      win32
+[debug] [2021-09-14T06:44:19.923Z] Node Version:  v14.17.4
+[debug] [2021-09-14T06:44:19.925Z] Time:          Mon Sep 13 2021 23:44:19 GMT-0700 (Pacific Daylight Time)
+[debug] [2021-09-14T06:44:19.925Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-09-14T06:44:19.933Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-09-14T06:44:19.933Z] > authorizing via signed-in user (farusmith5@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  Z:\Portfolio\React\facebook-clone
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2021-09-14T06:44:35.279Z] > refreshing access token with scopes: []
+[debug] [2021-09-14T06:44:35.279Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-09-14T06:44:35.874Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Tue, 14 Sep 2021 06:44:35 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-14T06:44:35.970Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/availableProjects pageSize=100
+[debug] [2021-09-14T06:44:36.905Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/availableProjects 200
+[debug] [2021-09-14T06:44:36.906Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/availableProjects [omitted]
+[debug] [2021-09-14T06:46:16.757Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-09-14T06:46:16.757Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-09-14T06:46:19.068Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Tue, 14 Sep 2021 06:46:18 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-14T06:46:19.149Z] >>> HTTP REQUEST POST https://firebase.googleapis.com/v1beta1/projects/fleet-coyote-269212:addFirebase  
+ 
+[debug] [2021-09-14T06:46:20.143Z] <<< HTTP RESPONSE 400 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Tue, 14 Sep 2021 06:46:20 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-09-14T06:46:20.144Z] <<< HTTP RESPONSE BODY {"error":{"code":400,"message":"Billing Account [billingAccounts/014011-C7228C-F8DA43] cannot pay for businessEntity/CLOUD_PLATFORM","status":"FAILED_PRECONDITION"}}
+[debug] [2021-09-14T06:46:20.146Z] HTTP Error: 400, Billing Account [billingAccounts/014011-C7228C-F8DA43] cannot pay for businessEntity/CLOUD_PLATFORM
+[debug] [2021-09-14T06:46:20.764Z] FirebaseError: HTTP Error: 400, Billing Account [billingAccounts/014011-C7228C-F8DA43] cannot pay for businessEntity/CLOUD_PLATFORM
+    at module.exports (C:\Users\faruqismael\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:38:12)
+    at Request._callback (C:\Users\faruqismael\AppData\Roaming\npm\node_modules\firebase-tools\lib\api.js:41:35)
+    at Request.self.callback (C:\Users\faruqismael\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:185:22)
+    at Request.emit (events.js:400:28)
+    at Request.emit (domain.js:470:12)
+    at Request.<anonymous> (C:\Users\faruqismael\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1154:10)
+    at Request.emit (events.js:400:28)
+    at Request.emit (domain.js:470:12)
+    at IncomingMessage.<anonymous> (C:\Users\faruqismael\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (events.js:519:28)
+    at IncomingMessage.emit (events.js:412:35)
+    at IncomingMessage.emit (domain.js:470:12)
+    at endReadableNT (internal/streams/readable.js:1317:12)
+    at processTicksAndRejections (internal/process/task_queues.js:82:21)
+[error] 
+[error] Error: Failed to add Firebase to Google Cloud Platform project. See firebase-debug.log for more info.

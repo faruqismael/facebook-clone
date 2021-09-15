@@ -20,13 +20,16 @@ function App() {
     photoURL: sessionStorage.getItem("photoURL"),
     email: sessionStorage.getItem("email"),
   });
+  const [loggedIn, setLoggedIn] = useState(false);
 
   const [posts, setPosts] = useState(postsList);
 
   const setUser = (user) => {
     setUserData(user);
 
+    setLoggedIn(true);
     sessionStorage.setItem("isLogged", true);
+    setLoggedIn(sessionStorage.getItem("isLogged"));
     sessionStorage.setItem("displayName", user.displayName);
     sessionStorage.setItem("photoURL", user.photoURL);
     sessionStorage.setItem("email", user.email);
@@ -34,6 +37,7 @@ function App() {
 
   const logout = async () => {
     setUserData(null);
+    setLoggedIn(false);
 
     sessionStorage.removeItem("isLogged");
     sessionStorage.removeItem("displayName");
@@ -41,6 +45,11 @@ function App() {
     sessionStorage.removeItem("email");
 
     await auth.signOut();
+  };
+
+  const checkLoggedIn = () => {
+    if (loggedIn == false) return false;
+    return true;
   };
 
   useEffect(() => {
@@ -51,7 +60,8 @@ function App() {
 
   return (
     <UserContext.Provider value={{ userData, setUser, logout }}>
-      {!sessionStorage.getItem("isLogged") ? (
+      {console.log(typeof sessionStorage.getItem("isLogged"))}
+      {!checkLoggedIn() ? (
         <Login />
       ) : (
         <AppContainer>
